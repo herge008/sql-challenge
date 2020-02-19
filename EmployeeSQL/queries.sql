@@ -15,7 +15,7 @@ SELECT d.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name, e.hire_date,
 FROM employees AS e
 	INNER JOIN dept_manager AS dm ON dm.emp_no = e.emp_no
 	LEFT JOIN departments AS d ON dm.dept_no = d.dept_no
---WHERE dm.to_date = '9999-01-01'
+WHERE dm.to_date = '9999-01-01'
 ORDER BY e.last_name ASC, e.first_name ASC;
 
 -- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
